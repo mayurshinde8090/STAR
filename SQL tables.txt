@@ -1,0 +1,35 @@
+Create database STAR;
+
+show databases;
+
+Create table Admin(
+Admn_no int(6) primary key,
+Date_of_Admission varchar(10),
+Name char(30),
+Father_Name char(30),
+Mothers_Name char(30),
+DOB varchar(10),
+Admin_category varchar(5),
+class varchar(4),
+cast char(10),
+TC_NO int(10),
+TC_date varchar(10)
+);
+
+show tables;
+
+CREATE TABLE TC (
+    TC_no INT(10) PRIMARY KEY,
+    TC_date VARCHAR(10),
+    Admn_no INT(6),
+    FOREIGN KEY (Admn_no) REFERENCES Admin(Admn_no),
+    Name VARCHAR(30),
+    Reason VARCHAR(30),
+    Remark VARCHAR(30)
+);
+
+show tables;
+
+
+
+
